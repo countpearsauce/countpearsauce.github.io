@@ -119,7 +119,35 @@ img {
 
 .text-resource-link {
   font-size: 18px;
-  color: var(--text-black);
+  color: var(--text-black); /* Your default color */
+  text-decoration: underline; /* Optional: standard for links */
+}
+
+/* Color after it has been visited */
+/* .text-resource-link:visited {
+  color: purple;
+} */
+
+/* Color while the user is actually clicking it */
+.text-resource-link:active {
+  color: blue;
+}
+
+.text-current-resource-link {
+  font-size: 18px;
+  color: var(--text-black); /* Your default color */
+  text-decoration: underline; /* Optional: standard for links */
+  font-weight: bold;
+}
+
+/* Color after it has been visited */
+/* .text-current-resource-link:visited {
+  color: purple;
+} */
+
+/* Color while the user is actually clicking it */
+.text-current-resource-link:active {
+  color: blue;
 }
 
 .front-picture {
