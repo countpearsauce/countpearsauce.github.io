@@ -124,13 +124,13 @@ img {
 }
 
 /* Color after it has been visited */
-/* .text-resource-link:visited {
-  color: purple;
-} */
+.text-resource-link:hover {
+  color: blue;
+}
 
 /* Color while the user is actually clicking it */
 .text-resource-link:active {
-  color: blue;
+  color: purple;
 }
 
 .text-current-resource-link {
@@ -141,13 +141,13 @@ img {
 }
 
 /* Color after it has been visited */
-/* .text-current-resource-link:visited {
-  color: purple;
-} */
+.text-current-resource-link:hover {
+  color: blue;
+}
 
 /* Color while the user is actually clicking it */
 .text-current-resource-link:active {
-  color: blue;
+  color: purple;
 }
 
 .front-picture {
