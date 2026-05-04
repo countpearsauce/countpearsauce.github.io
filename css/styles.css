@@ -84,8 +84,8 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 32px;
-  padding: 32px 2vw 32px 2vw;
+  gap: 16px;
+  padding: 16px 2vw 16px 2vw;
   flex-grow: 0;
   flex-shrink: 1;
   width: 40%;
@@ -103,7 +103,7 @@ img {
   }
 } */
 
-.resource {
+.navbar {
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -117,38 +117,59 @@ img {
   
 }
 
-.text-resource-link {
-  font-size: 18px;
-  color: var(--text-black); /* Your default color */
-  text-decoration: underline; /* Optional: standard for links */
+.navbar ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Makes the list items horizontal */
 }
 
-/* Color after it has been visited */
-.text-resource-link:hover {
+.navbar a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
   color: blue;
 }
 
-/* Color while the user is actually clicking it */
-.text-resource-link:active {
+.navbar a:active {
   color: purple;
 }
 
-.text-current-resource-link {
+/* .text-navbar {
   font-size: 18px;
-  color: var(--text-black); /* Your default color */
-  text-decoration: underline; /* Optional: standard for links */
+  color: var(--text-black);
+  text-decoration: underline;
+}
+
+.text-navbar-link:hover {
+  color: blue;
+}
+
+.text-navbar-link:active {
+  color: purple;
+}
+
+.text-current-navbar-link {
+  font-size: 18px;
+  color: var(--text-black);
+  text-decoration: underline;
   font-weight: bold;
 }
 
-/* Color after it has been visited */
-.text-current-resource-link:hover {
+.text-current-navbar-link:hover {
   color: blue;
 }
 
-/* Color while the user is actually clicking it */
-.text-current-resource-link:active {
+.text-current-navbar-link:active {
   color: purple;
-}
+} */
 
 .front-picture {
   margin: 0 auto 0 auto;
