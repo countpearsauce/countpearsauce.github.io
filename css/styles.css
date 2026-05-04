@@ -133,6 +133,15 @@ img {
   font-size: 18px;
 }
 
+.navbar a.active {
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
 .navbar a:hover {
   background-color: #ddd;
   color: blue;
@@ -142,34 +151,6 @@ img {
   color: purple;
 }
 
-/* .text-navbar {
-  font-size: 18px;
-  color: var(--text-black);
-  text-decoration: underline;
-}
-
-.text-navbar-link:hover {
-  color: blue;
-}
-
-.text-navbar-link:active {
-  color: purple;
-}
-
-.text-current-navbar-link {
-  font-size: 18px;
-  color: var(--text-black);
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-.text-current-navbar-link:hover {
-  color: blue;
-}
-
-.text-current-navbar-link:active {
-  color: purple;
-} */
 
 .front-picture {
   margin: 0 auto 0 auto;
