@@ -3,6 +3,7 @@
   --text-black: rgba(30, 30, 30, 1);
   --text-gray: rgba(60, 60, 60, 1);
   --text-blue: rgba(60, 60, 140, 1);
+  --banner-gray: rgba(245, 245, 245, 1);
 }
 
 .text-black {
@@ -16,7 +17,6 @@
 .text-blue {
   color: var(--text-blue);
 }
-
 
 /* CSS Reset */
 * {
@@ -45,7 +45,7 @@ img {
   flex-grow: 0;
   flex-shrink: 1;
   width: 100%;
-  background-color: rgba(245, 245, 245, 1);
+  background-color: var(--banner-gray);
 }
 
 .text-4 {
@@ -135,15 +135,16 @@ img {
 
 .navbar a.active {
   display: block;
-  color: red;
+  color: black;
+  background-color: #dddddd;
   text-align: center;
   padding: 14px 20px;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 18px;
 }
 
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: #88ccff;
   color: blue;
 }
 
