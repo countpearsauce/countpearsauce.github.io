@@ -3,7 +3,25 @@ const projectCards = [
       title: "Local Music Player",
       tag: "Javascript/HTML/CSS",
       link: "https://github.com/cse110-fa22-group4/cse110-fa22-group4",
-      description: "something"
+      description: "Led a team of 9 to build an offline electron-based application with full music player functionality in just 5 weeks."
+    },
+    {
+        title: "Full-Stack Q&A Forum Application",
+        tag: "Javascript/SQL",
+        link: "https://github.com/leo3friedman/cse-210-group-project",
+        description: "Collaborately designed and developed a full-stack forum application in just 5 weeks. Main SQL contributor."
+    },
+    {
+        title: "Sustainable Garden Demo",
+        tag: "Unity/C#/HTML",
+        link: "https://syn100-wi23-team-6.github.io/Sustainable-Cookies/play.html",
+        description: "An education tool incorporating real world knowledge to teach sustainable gardening."
+    },
+    {
+        title: "2D Racing Game",
+        tag: "Java",
+        link: "https://github.com/countpearsauce/CombatRacing",
+        description: "Video game with simulated physics where you race against another player or the computer."
     }
   ];
 
@@ -14,9 +32,8 @@ function renderCards() {
     // Map over the objects and generate HTML strings
     const cardsHTML = projectCards.map(card => `
         <div class="card-project">
-        <a href="${card.link}" class="card-title">${card.title}</a>
-        <p class="card-tag">${card.tag}</p>
-        <p class="card-description">${card.description}</p>
+            <p class="card-tag"> <a href="${card.link}" class="card-title">${card.title}</a>     (${card.tag})</p>
+            <p class="card-description">${card.description}</p>
         </div>
     `).join(''); // Join turns the array of strings into one long HTML string
 

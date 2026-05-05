@@ -177,17 +177,11 @@ img {
 .section {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 16px 16px;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
 }
 
 .text-header {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
   font-family: var(--font-family-inter);
   font-weight: 700;
   font-size: 24px;
@@ -199,33 +193,26 @@ img {
 }
 
 .card-project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   width: 100%;
 }
 
 .card-project {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 4px;
+  gap: 16px;
   padding: 16px;
-  flex-grow: 0;
-  flex-shrink: 1;
   width: 100%;
-  min-width: 240px;
+  min-width: 300px;
   background-color: white;
   border: 1px solid rgba(217, 217, 217, 1);
   border-radius: 8px;
 }
 
 .card-title {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
   font-family: var(--font-family-inter);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: -2%;
   line-height: 120.00000476837158%;
   text-decoration: none;
@@ -234,39 +221,18 @@ img {
 }
 
 .card-tag {
-  text-indent: 20px;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
   font-family: var(--font-family-inter);
   font-weight: 700;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: -2%;
   line-height: 120.00000476837158%;
   text-decoration: none;
   text-transform: none;
   color: var(--text-black);
 }
-/* 
-.project-link {
-  text-indent: 20px;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  font-family: var(--font-family-inter);
-  font-weight: 700;
-  font-size: 10px;
-  letter-spacing: -2%;
-  line-height: 120.00000476837158%;
-  text-decoration: underline;
-  text-transform: none;
-  color: var(--text-blue);
-} */
 
-.card-body {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
+.card-description {
+  text-indent: 20px;
   font-family: var(--font-family-inter);
   font-weight: normal;
   font-size: 14px;
