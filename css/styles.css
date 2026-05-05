@@ -251,6 +251,13 @@ a.card-title {
   color: var(--text-gray);
 }
 
+.show-more-btn {
+  width:100px;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
 .footer {
   margin-top: auto;
   display: flex;

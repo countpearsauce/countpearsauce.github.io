@@ -12,10 +12,10 @@ const projectCards = [
         description: "Collaborately designed and developed a full-stack forum application in just 5 weeks. Main SQL contributor."
     },
     {
-        title: "Sustainable Garden Demo",
-        tag: "Unity/C#/HTML",
-        link: "https://syn100-wi23-team-6.github.io/Sustainable-Cookies/play.html",
-        description: "An education tool incorporating real world knowledge to teach sustainable gardening."
+        title: "Personal Website",
+        tag: "HTML/CSS",
+        link: "https://countpearsauce.github.io/index.html",
+        description: "Designed and deployed a personal portfolio website to showcase projects and technical skills."
     },
     {
         title: "Raytracer",
@@ -28,24 +28,50 @@ const projectCards = [
         tag: "Java",
         link: "https://github.com/countpearsauce/CombatRacing",
         description: "Video game with simulated physics where you race against another player or the computer."
+    },
+    {
+        title: "Sustainable Garden Demo",
+        tag: "Unity/C#/HTML",
+        link: "https://syn100-wi23-team-6.github.io/Sustainable-Cookies/play.html",
+        description: "An education tool incorporating real world knowledge to teach sustainable gardening."
     }
   ];
+
+// 2. Settings for pagination
+let visibleCount = 3; // How many items to show initially
+const increment = 3;    // How many items to add on click
 
 function renderCards() {
     const container = document.getElementById('card-project-container');
     if (!container) return;
 
+    const button = document.getElementById('show-more-btn');
+
+    // Slice the array to get only the visible items
+    const visibleCards = projectCards.slice(0, visibleCount);
+
     // Map over the objects and generate HTML strings
-    const cardsHTML = projectCards.map(card => `
+    const cardsHTML = visibleCards.map(card => `
         <div class="card-project">
             <p class="card-tag"> ${card.link == "" ? `<span ` : `<a href=`}${card.link ? `${card.link}` : ''} target="_blank" class="card-title">${card.title}${card.link ? `</a>` : `</span>`}     (${card.tag})</p>
             <p class="card-description">${card.description}</p>
         </div>
     `).join(''); // Join turns the array of strings into one long HTML string
 
+    // Hide the button if all items are displayed
+    if (visibleCount >= projectCards.length) {
+        button.style.display = 'none';
+    }
+    
     // Inject the generated HTML into your container
     container.innerHTML = cardsHTML;
 }
 
 // Run the function when the page loads
 document.addEventListener('DOMContentLoaded', renderCards);
+
+// Attach event listener to the "Show More" button
+document.getElementById('show-more-btn').addEventListener('click', () => {
+    visibleCount += increment; // Increase visible count
+    renderCards();             // Re-render the updated list
+});
