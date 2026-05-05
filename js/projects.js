@@ -38,7 +38,7 @@ function renderCards() {
     // Map over the objects and generate HTML strings
     const cardsHTML = projectCards.map(card => `
         <div class="card-project">
-            <p class="card-tag"> ${card.link == "" ? `<p ` : `<a href=`}${card.tag ? `(${card.tag})` : ''} class="card-title">${card.title}${card.tag ? `</a>` : `</p>`}     (${card.tag})</p>
+            <p class="card-tag"> ${card.link == "" ? `<span ` : `<a href=`}${card.link ? `${card.link}` : ''} target="_blank" class="card-title">${card.title}${card.link ? `</a>` : `</span>`}     (${card.tag})</p>
             <p class="card-description">${card.description}</p>
         </div>
     `).join(''); // Join turns the array of strings into one long HTML string
