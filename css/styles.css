@@ -28,7 +28,6 @@
 
 body {
   width: 100%;
-  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -48,6 +47,7 @@ img {
   flex-shrink: 1;
   width: 100%;
   min-width: 340px;
+  min-height: calc(100vh - 120px);
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -252,9 +252,10 @@ a.card-title {
 }
 
 .footer {
+  margin-top: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 16px;
