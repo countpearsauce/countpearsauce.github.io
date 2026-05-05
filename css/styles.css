@@ -42,15 +42,19 @@ img {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0px 3vw;
+  padding: 0px 3vw 16px 3vw;
   gap: 0px 32px;
   flex-grow: 0;
   flex-shrink: 1;
   width: 100%;
-  min-width: 300px;
+  min-width: 340px;
 
   @media (max-width: 768px) {
     flex-direction: column;
+  }
+
+  @media (max-width: 340px) {
+    padding: 0px 10px 16px 10px;
   }
 }
 
@@ -63,13 +67,9 @@ img {
   width: 30%;
   min-width: 240px;
   background-color: white;
-  opacity: 0.8;
 
   @media (max-width: 768px) {
     width: 100%;
-  }
-  @media (max-width: 300px) {
-    padding: 16px 8px 16px 8px;
   }
 }
 
@@ -78,7 +78,7 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 3vh 0px 3vh 0px;
+  padding: 16px 0px 16px 0px;
   flex-grow: 0;
   flex-shrink: 1;
   background-color: white;
@@ -114,41 +114,49 @@ img {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 8px 0px;
+  padding: 0px 0px;
   background-color: rgba(255, 255, 255, 1);
+  width: 70%;
 
   @media (max-width: 768px) {
     width: 100%;
   }
-  @media (max-width: 300px) {
-    padding: 32px 6px;
-  }
 }
 
 .navbar-container {
+  position: fixed;
   width: 100%;
   align-self: stretch;
+  height: calc(34px + 17px);
+  z-index: 1000;
 }
 
 .navbar {
-  display: flex;
-  box-sizing: border-box;
   flex-direction: row;
   justify-content: left;
-  flex-grow: 0;
-  flex-shrink: 1;
-  color: var(--text-black);
-  text-align: center;
-  text-decoration: underline;
   max-width: 100%;
   overflow: hidden;
   flex-wrap: wrap;
 }
 
+.navbar-spacer {
+  position: static;
+  align-self: stretch;
+  height: calc(32px + 17px);
+  width: 100%;
+}
+
 .navbar ul {
   list-style-type: none; /* Remove bullet points */
   display: flex; /* Makes the list items horizontal */
-  flex-grow: 1;
+  width: fit-content;
+  border-bottom: 1px solid darkgray;
+  border-left: 1px solid darkgray;
+  border-right: 1px solid darkgray;
+}
+
+.navbar li {
+  background-color: white;
 }
 
 .navbar a {
@@ -156,6 +164,7 @@ img {
   color: black;
   font-size: 18px;
   padding: 14px 14px;
+  text-decoration:none;
 }
 
 .navbar a.active {
@@ -211,9 +220,12 @@ img {
   font-weight: 700;
   font-size: 18px;
   letter-spacing: -2%;
-  line-height: 120.00000476837158%;
+  line-height: 120.0%;
   text-decoration: none;
   text-transform: none;
+}
+
+a.card-title {
   color: var(--text-blue);
 }
 
@@ -238,11 +250,23 @@ img {
   text-transform: none;
   color: var(--text-gray);
 }
-/* 
-.text-bullet-list {
-  padding: 0px 0px 0px 15px;
 
-} */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 32px 32px 32px 32px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid darkgray
+}
+
+/* Contact Page */
 
 .icon-default {
   flex-grow: 0;
@@ -284,22 +308,9 @@ img {
   padding: 0px;
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 16px;
-  padding: 32px 32px 64px 32px;
-  flex-grow: 0;
-  flex-shrink: 1;
-  width: 100%;
-  background-color: white;
-  border-top: 1px solid darkgray
-}
-
 .text-contact-link {
   padding: 0px 0px 4px 0px;
   color: var(--text-blue);
 }
+
+/* Hobby Page */
