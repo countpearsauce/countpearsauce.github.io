@@ -83,7 +83,7 @@ img {
   flex-shrink: 1;
   width: 40%;
   background-color: rgba(255, 255, 255, 1);
-  opacity: 0.800000011920929;
+  opacity: 0.8;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -131,7 +131,7 @@ img {
   background-color: #dddddd;
   text-align: center;
   padding: 14px 20px;
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 18px;
 }
 
