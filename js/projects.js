@@ -37,9 +37,8 @@ const projectCards = [
     }
   ];
 
-// 2. Settings for pagination
 let visibleCount = 3; // How many items to show initially
-const increment = 3;    // How many items to add on click
+const increment = 5;    // How many items to add on click
 
 function renderCards() {
     const container = document.getElementById('card-project-container');
@@ -58,11 +57,13 @@ function renderCards() {
         </div>
     `).join(''); // Join turns the array of strings into one long HTML string
 
-    // Hide the button if all items are displayed
-    if (visibleCount >= projectCards.length) {
-        button.style.display = 'none';
+    // Change text when all items are loaded
+    if (visibleCount >= projectCards.length)
+        button.innerText = "Show less";
+    else {
+        button.innerText = "Show more";
     }
-    
+
     // Inject the generated HTML into your container
     container.innerHTML = cardsHTML;
 }
@@ -72,6 +73,9 @@ document.addEventListener('DOMContentLoaded', renderCards);
 
 // Attach event listener to the "Show More" button
 document.getElementById('show-more-btn').addEventListener('click', () => {
-    visibleCount += increment; // Increase visible count
+    if (visibleCount < projectCards.length)
+        visibleCount += increment; // Increase visible count
+    else
+        visibleCount = 3;
     renderCards();             // Re-render the updated list
 });
