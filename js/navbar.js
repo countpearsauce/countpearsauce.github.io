@@ -31,7 +31,7 @@ function highlightActiveLink() {
     const linkHref = link.getAttribute('href');
 
     // 3. Highlight the active link if the paths match
-    if (linkHref && (currentPath === linkHref || currentPath.endsWith(linkHref))) {
+    if (linkHref && (currentPath === linkHref || currentPath.endsWith(linkHref) || currentPath == "" || (currentPath.endsWith("index.html") && linkHref == "/"))) {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
       console.log(`Active link identified: ${linkHref}`);

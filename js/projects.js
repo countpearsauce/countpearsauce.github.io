@@ -18,6 +18,12 @@ const projectCards = [
         description: "Designed and deployed a personal portfolio website to showcase projects and technical skills."
     },
     {
+        title: "Argoverse 2 Dataset Competition",
+        tag: "Python",
+        link: "",
+        description: "Developed and evaluated multiple machine learning architectures on the Argoverse 2 Dataset, including MLPs, LSTMs, GNN-based transformers, hybrid attention models, and S4 sequence models."
+    },
+    {
         title: "Raytracer",
         tag: "C++",
         link: "",
